@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">commons-android</string>
+    <string name="open_pdf">Abrir Pdf</string>
+    <string name="open_image">Abrir Imagen</string>
+</resources>

@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation project(":commons")
+
+    implementation libs.androidxAppCompat
+    implementation libs.androidxConstraintLayout
+    implementation libs.androidxNavigationFragmentKtx
+    implementation libs.androidxNavigationUiKtx
+    implementation libs.androidxCoreKtx
+    implementation libs.koin
+    implementation libs.kotlin
+    implementation libs.kotlinReflect
+    implementation libs.retrofit
+
+
+    testImplementation libs.jUnit
+    testImplementation libs.kotlinCoroutinesTest
+}

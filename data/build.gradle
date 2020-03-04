@@ -1,0 +1,48 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+
+buildscript {
+    ext.kotlin_version = '1.3.60'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+    }
+}
+
+dependencies {
+    implementation project(":commons")
+    implementation project(":domain")
+    implementation project(":commons-android")
+
+
+    implementation libs.koin
+    implementation libs.kotlin
+    implementation libs.kotlinCoroutinesAndroid
+    implementation libs.kotlinReflect
+    implementation libs.retrofit
+    implementation libs.retrofitMoshi
+    implementation libs.retrofitKotlinCoroutinesAdapter
+    implementation libs.interceptor
+
+    testImplementation libs.jUnit
+    testImplementation libs.mockito
+    testImplementation libs.mockitoInline
+    implementation 'androidx.core:core-ktx:1.1.0'
+}

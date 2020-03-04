@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MARGIN -->
+    <dimen name="tinySmallMargin">5dp</dimen>
+    <dimen name="smallMargin">10dp</dimen>
+    <dimen name="tinyMediumMargin">15dp</dimen>
+    <dimen name="mediumMargin">20dp</dimen>
+    <dimen name="tinyBigMargin">25dp</dimen>
+    <dimen name="bigMargin">30dp</dimen>
+    <dimen name="statusBarPlusActionBarMargin">80dp</dimen>
+    <dimen name="statusBarPlusConstraintLayoutMediumMargin">40dp</dimen>
+
+    <!-- PADDING -->
+    <dimen name="statusBarPadding">24dp</dimen>
+    <dimen name="tinySmallPadding">5dp</dimen>
+    <dimen name="smallPadding">10dp</dimen>
+    <dimen name="tinyMediumPadding">15dp</dimen>
+    <dimen name="mediumPadding">20dp</dimen>
+    <dimen name="tinyBigPadding">25dp</dimen>
+    <dimen name="bigPadding">30dp</dimen>
+
+    <!-- DIMENSIONS -->
+    <dimen name="tinySmallDimension">5dp</dimen>
+    <dimen name="smallDimension">10dp</dimen>
+    <dimen name="tinyMediumDimension">15dp</dimen>
+    <dimen name="mediumDimension">20dp</dimen>
+    <dimen name="tinyBigDimension">25dp</dimen>
+    <dimen name="bigDimension">30dp</dimen>
+
+    <!-- CONSTRAINT LAYOUT MARGINS -->
+    <dimen name="constraintLayout_xsmallMargin">4dp</dimen>
+    <dimen name="constraintLayout_smallMargin">8dp</dimen>
+    <dimen name="constraintLayout_mediumMargin">16dp</dimen>
+    <dimen name="constraintLayout_bigMargin">24dp</dimen>
+    <dimen name="constraintLayout_greatMargin">32dp</dimen>
+    <dimen name="constraintLayout_extraGreatMargin">64dp</dimen>
+
+
+
+</resources>
