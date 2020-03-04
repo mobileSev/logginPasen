@@ -3,6 +3,7 @@ package com.juntadeandalucia.ced.data.operations.login
 import com.juntadeandalucia.ced.data.remote.NoContentResponse
 import com.juntadeandalucia.ced.data.remote.ParsedResponse
 import com.juntadeandalucia.ced.data.remote.ResponseParse
+import com.juntadeandalucia.ced.domain.operations.login.CheckLoginError
 import com.juntadeandalucia.ced.domain.operations.login.LoginError
 
 class LoginRemoteDataSource(val service : LoginService, val parser : ResponseParse) {
