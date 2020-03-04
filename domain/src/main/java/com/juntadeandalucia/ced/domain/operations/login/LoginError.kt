@@ -1,6 +1,8 @@
 package com.juntadeandalucia.ced.domain.operations.login
 
+import com.juntadeandalucia.ced.domain.RepositoryFailure
+
 sealed class LoginError {
-    object InvalidUser : LoginError()
-    data class UnknownError (val message : String) : LoginError()
+    data class Repository(val error : RepositoryFailure) : LoginError()
+    data class KnownError (val error : LoginEº) : LoginError()
 }
