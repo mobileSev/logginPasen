@@ -3,11 +3,8 @@ package com.juntadeandalucia.ced.newipasen
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import com.juntadeandalucia.ced.newipasen.base.BackPressedListener
-import com.juntadeandalucia.ced.newipasen.base.BaseActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.main_activity)
-
     }
 
 
