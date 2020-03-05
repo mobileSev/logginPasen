@@ -65,7 +65,6 @@
             android:id="@+id/tvBtnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
             android:text="Iniciar sesión"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -73,7 +72,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
 
         <ProgressBar
             android:id="@+id/pbBtnLogin"
