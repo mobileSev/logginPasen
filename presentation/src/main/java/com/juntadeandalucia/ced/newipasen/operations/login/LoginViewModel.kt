@@ -32,7 +32,7 @@ class LoginViewModel(val checkLogin: CheckLogin) : BaseViewModel<LoginViewState,
     }
 
     private fun handleError(loginError: CheckLoginError) {
-        Log.e("Formacion", "Error en loogin")
+        Log.e("Formacion", "Error en login")
 
         val msg = when (loginError) {
             is CheckLoginError.KnownError -> "Error conocido"

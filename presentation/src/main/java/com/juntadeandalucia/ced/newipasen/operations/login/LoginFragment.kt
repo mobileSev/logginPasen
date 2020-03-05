@@ -72,7 +72,7 @@ class LoginFragment : Fragment() {
             loginViewModel.doLogin(
                 tilUsername.editText?.text.toString(),
                 tilUserPass.editText?.text.toString(),
-                BuildConfig.VERSION_NAME)
+                "{\"version\":\"11.9.1\"}")
         }
     }
 
