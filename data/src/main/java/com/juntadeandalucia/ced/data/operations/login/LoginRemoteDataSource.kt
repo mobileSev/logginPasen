@@ -12,18 +12,11 @@ import java.lang.Exception
 class LoginRemoteDataSource(val service : LoginService, val parser : ResponseParse) {
 
     suspend fun doLogin(request : LoginRequest) : ParsedResponse<LoginError, NoContentResponse>{
-        try {
-            val loginResponse =
-                service.doLogin(request.username, request.password, request.version).await()
-
-            return parser.parse(loginResponse)
-        }catch (e : Exception){
-            print(e)
-        }
-
         val loginResponse =
             service.doLogin(request.username, request.password, request.version).await()
-        return parser.parse(loginResponse)
+
+            return parser.parse(loginResponse)
+
     }
 
 }

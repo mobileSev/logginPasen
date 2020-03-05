@@ -12,7 +12,6 @@ import com.juntadeandalucia.ced.newipasen.R
 import com.juntadeandalucia.ced.newipasen.extension.hide
 import com.juntadeandalucia.ced.newipasen.extension.show
 import com.juntadeandalucia.ced.newipasen.extension.toast
-import com.juntadeandalucia.ced.newipasen.operations.Login.LoginFragmentDirections
 import kotlinx.android.synthetic.main.fragment_login.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
