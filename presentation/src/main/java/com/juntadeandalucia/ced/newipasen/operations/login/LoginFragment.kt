@@ -57,6 +57,9 @@ class LoginFragment : Fragment() {
 
                 is LoginViewState.Error -> {
                     it.error.toast(context)
+
+                    tvBtnLogin.show()
+                    pbBtnLogin.hide()
                 }
             }
         })
