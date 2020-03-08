@@ -8,7 +8,7 @@ sealed class LoginViewState : Parcelable {
     data class Error(val error : String) : LoginViewState()
 
     @Parcelize
-    object Login : LoginViewState()
+    object Success : LoginViewState()
 
     @Parcelize
     object Loading : LoginViewState()

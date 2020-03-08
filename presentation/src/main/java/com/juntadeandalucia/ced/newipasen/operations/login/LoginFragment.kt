@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
-import com.juntadeandalucia.ced.newipasen.BuildConfig
 import com.juntadeandalucia.ced.newipasen.R
 import com.juntadeandalucia.ced.newipasen.extension.hide
 import com.juntadeandalucia.ced.newipasen.extension.show
@@ -44,10 +43,8 @@ class LoginFragment : Fragment() {
 
         loginViewModel.state.observe(viewLifecycleOwner, Observer {
             when (it) {
-                is LoginViewState.Login -> {
-                    view?.let { v ->
-                        Navigation.findNavController(v)
-                            .navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment("Bienvenido")) }
+                is LoginViewState.Success -> {
+                    pbBtnLogin.hide()
                 }
 
                 is LoginViewState.Loading -> {
@@ -63,13 +60,25 @@ class LoginFragment : Fragment() {
                 }
             }
         })
+
+        loginViewModel.transition.observe(viewLifecycleOwner, Observer {
+            when (it) {
+                is LoginViewTransition.ToWelcome -> {
+                    view?.let { v ->
+                        val toWelcome = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment("Bienvenido al nuevo iPasen")
+                        Navigation.findNavController(v).navigate(toWelcome)
+                    }
+                }
+            }
+
+        })
     }
 
 
     private fun initListeners() {
 
         btnLogin.setOnClickListener {
-            loginViewModel.doLogin(
+            loginViewModel.checkLogin(
                 tilUsername.editText?.text.toString(),
                 tilUserPass.editText?.text.toString(),
                 "{\"version\":\"11.9.1\"}")

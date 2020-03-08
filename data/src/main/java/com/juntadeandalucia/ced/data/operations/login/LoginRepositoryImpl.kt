@@ -9,7 +9,7 @@ import com.juntadeandalucia.ced.domain.operations.login.LoginError
 import com.juntadeandalucia.ced.domain.operations.login.LoginInput
 import com.juntadeandalucia.ced.domain.operations.login.LoginRepository
 
-class LoginRepositoryImpl(val dataSource: LoginRemoteDataSource, val executor: RemoteDataSourceExecutor) :
+class LoginRepositoryImpl(private val dataSource: LoginRemoteDataSource, val executor: RemoteDataSourceExecutor) :
     LoginRepository {
     override suspend fun checkLogin(input : LoginInput) : Either<CheckLoginError,Unit> {
         val request = LoginRequest(
@@ -17,7 +17,7 @@ class LoginRepositoryImpl(val dataSource: LoginRemoteDataSource, val executor: R
                         input.password,
                         input.version)
 
-        val responseForParsing : ParsedResponse<LoginError,NoContentResponse> = executor { dataSource.doLogin(request)}
+        val responseForParsing : ParsedResponse<LoginError,NoContentResponse> = executor { dataSource.checkLogin(request) }
 
         return when (responseForParsing){
             is ParsedResponse.Success -> Either.Right(Unit)

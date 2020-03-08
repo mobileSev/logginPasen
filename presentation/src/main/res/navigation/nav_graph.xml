@@ -17,10 +17,13 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.juntadeandalucia.ced.newipasen.operations.login.WelcomeFragment"
+        android:name="com.juntadeandalucia.ced.newipasen.operations.welcome.WelcomeFragment"
         android:label="WelcomeFragment">
         <argument
             android:name="message"
             app:argType="string" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
 </navigation>

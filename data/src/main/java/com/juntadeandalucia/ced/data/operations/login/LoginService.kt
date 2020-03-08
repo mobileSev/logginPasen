@@ -11,7 +11,7 @@ interface LoginService {
 
     @FormUrlEncoded
     @POST("educacion/seneca/seneca/jsp/pasendroid/login")
-    fun doLogin(
+    fun checkLogin(
         @Field("USUARIO") username: String,
         @Field("CLAVE") password: String,
         @Field("p") version: String
